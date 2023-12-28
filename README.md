@@ -20,7 +20,7 @@ Dummy section for the description of the second project. Please replace this tex
 **Project Link:**
 [Project Two](#)
 
-### 3. Youtube Video Scraper
+### 3. E-Commerce Product Scraper
 
 **Description:**
 Dummy section for the description of the third project. Please replace this text with the actual project description.
@@ -28,7 +28,7 @@ Dummy section for the description of the third project. Please replace this text
 **Project Link:**
 [Project Three](#)
 
-### 4. Map Data Scraper
+### 4. Indonesia 2024 Election News Scraper
 
 **Description:**
 Dummy section for the description of the fourth project. Please replace this text with the actual project description.
