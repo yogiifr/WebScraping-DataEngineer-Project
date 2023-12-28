@@ -28,7 +28,7 @@ Dummy section for the description of the third project. Please replace this text
 **Project Link:**
 [Project Three](#)
 
-### 4. UNIQLO E-Commerce Product Scraper
+### 4. Gramedia Book Scraper
 
 **Description:**
 Dummy section for the description of the third project. Please replace this text with the actual project description.

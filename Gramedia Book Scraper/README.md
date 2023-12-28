@@ -1,4 +1,4 @@
-# REI E-Commerce Product Scraper
+# UNIQLO E-Commerce Product Scraper
 
 ## Project Description
 ~
@@ -12,4 +12,4 @@ For a visual guide and additional insights, you can refer to the following video
 
 **Title:** Web Scraping with Python - John Watson Rooney
 
-**Link:** [Watch PLaylist](https://www.youtube.com/playlist?list=PLRzwgpycm-FiTz9bGQoITAzFEOJkbF6Qp)
+**Link:** [Watch PLaylist](https://www.youtube.com/watch?v=r7pMqU2kYqc&list=PLRzwgpycm-FiTz9bGQoITAzFEOJkbF6Qp&index=5)
