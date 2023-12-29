@@ -6,7 +6,7 @@ It all started with my curiosity about how people on the internet manage to extr
 ### 1. Patient Portal Scraper
 
 **Description:**
-Dummy section for the description of the first project. Please replace this text with the actual project description.
+Made a tool in Python that hunts down practice names from sites like https://[ID].portal.athenahealth.com/. It checks different ID variations, snags the needed info, and neatly organizes it in an Excel file for easy peasy analysis.
 
 **Project Link:**
 [Project One](#)
@@ -14,7 +14,7 @@ Dummy section for the description of the first project. Please replace this text
 ### 2. Image Link Scraper
 
 **Description:**
-Dummy section for the description of the second project. Please replace this text with the actual project description.
+Create a script to snatch images in PNG format from https://www.pngmart.com/. The goal is to curate a dataset for machine learning, enhancing models through diverse visual data.
 
 **Project Link:**
 [Project Two](#)
@@ -22,7 +22,8 @@ Dummy section for the description of the second project. Please replace this tex
 ### 3. REI Product Scraper
 
 **Description:**
-Dummy section for the description of the third project. Please replace this text with the actual project description.
+Create up a Python script to scrape product info from the REI Outlet site https://www.rei.com/f/scd-outlet. It grabs details like product name, item number, price, and rating, giving a solid dataset for checking out what's on sale.
+
 
 **Project Link:**
 [Project Three](#)
@@ -30,7 +31,7 @@ Dummy section for the description of the third project. Please replace this text
 ### 4. BooksToScrape Scraper
 
 **Description:**
-Dummy section for the description of the third project. Please replace this text with the actual project description.
+Used Scrapy framework to make a Python web crawler for digging up book details from https://books.toscrape.com —things like title, price (£), and if it's in stock.
 
 **Project Link:**
 [Project Four](#)
