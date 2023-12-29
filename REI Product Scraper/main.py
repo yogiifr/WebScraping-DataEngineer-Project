@@ -1,4 +1,4 @@
-#
+# Import necessary libraries and modules
 import httpx
 from selectolax.parser import HTMLParser
 import time
@@ -7,7 +7,7 @@ from dataclasses import asdict, dataclass, fields
 import json
 import csv
 
-#
+# Define a data class 'Item' to represent product information
 @dataclass
 class Item:
     name: str
@@ -15,7 +15,7 @@ class Item:
     price: str
     rating: float
 
-#
+# Define a function to make an HTTP request and retrieve HTML content
 def get_html(url, **kwargs):
     headers     = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
 
@@ -35,14 +35,14 @@ def get_html(url, **kwargs):
     html        = HTMLParser(response.text)
     return html
 
-#
+# Define a function to make an HTTP request and retrieve HTML content
 def parse_search_page(html):
     products = html.css("li.VcGDfKKy_dvNbxUqm29K")
     
     for product in products:
         yield urljoin("https://www.rei.com/", product.css_first("a").attributes["href"])
 
-#
+# Define a function to clean data by removing unwanted characters
 def clean_data(value):
     chars_to_remove = ['$', "Item", '#']
     for char in chars_to_remove:
@@ -50,7 +50,7 @@ def clean_data(value):
             value = value.replace(char, '')
     return value.strip()
 
-#
+# Define a function to extract text from HTML using a CSS selector
 def extract_text(html, sel):
     try:
         text = html.css_first(sel).text()
@@ -58,7 +58,7 @@ def extract_text(html, sel):
     except AttributeError:
         return None
     
-#
+# Define a function to extract text from HTML using a CSS selector
 # class - . | id - #
 def parse_item_page(html):
     new_item = Item(
@@ -69,13 +69,13 @@ def parse_item_page(html):
     )
     return asdict(new_item)
 
-#
+# Define a function to export product data to a JSON file
 def export_to_json(products):
     with open('products.json', 'w', encoding='utf-8') as f:
         json.dump(products, f, ensure_ascii=False, indent=4)
     print('Saved to JSON')
 
-#
+# Define a function to export product data to a CSV file
 def export_to_csv(products):
     field_names = [field.name for field in fields(Item)]
     with open('products.csv', 'w') as f:
@@ -84,14 +84,14 @@ def export_to_csv(products):
         writer.writerows(products)
     print('Saved to CSV')
 
-#
+# Define a function to append a product to an existing CSV file
 def append_to_csv(product):
     field_names = [field.name for field in fields(Item)]
     with open('appendcsv.csv', 'a') as f:
         writer = csv.DictWriter(f, field_names)
         writer.writerow(product)
 
-#
+# Define the main function to execute the entire data collection process
 def main():
     products = []
 
@@ -116,6 +116,7 @@ def main():
     export_to_json(products)
     export_to_csv(products)
 
+# Define the main function to execute the entire data collection process
 if __name__ == "__main__":
     main()
 
